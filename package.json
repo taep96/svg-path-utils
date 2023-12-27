@@ -1,0 +1,50 @@
+{
+  "name": "@taep96/svg-path-utils",
+  "version": "0.0.0",
+  "description": "Create SVG paths using a builder pattern",
+  "keywords": [
+    "svg",
+    "path",
+    "utils",
+    "builder",
+    "fluent",
+    "api",
+    "typescript",
+    "ts"
+  ],
+  "license": "MIT",
+  "repository": "github:taep96/svg-path-utils",
+  "homepage": "https://taep96.moe/projects/svg-path-utils",
+  "author": "taep96 <taep96@cock.li> (https://taep96.moe/)",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "bun bun.build.ts",
+    "dev": " bun test --watch",
+    "lint": "tsc && eslint . --cache --cache-location node_modules/.cache/eslint",
+    "format": "prettier . --check --cache --write",
+    "ci": "bun lint && bun test && bun run build",
+    "publish": "bun ci && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "bun-plugin-dts": "^0.2.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  }
+}
