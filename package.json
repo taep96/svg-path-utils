@@ -1,6 +1,6 @@
 {
   "name": "@taep96/svg-path-utils",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Create SVG paths using a builder pattern",
   "keywords": [
     "svg",
